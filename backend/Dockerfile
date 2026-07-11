@@ -6,7 +6,8 @@ RUN apt-get update && apt-get install -y \
     libicu-dev \
     zip \
     unzip \
-    git
+    git \
+    && docker-php-ext-install pdo_mysql gd zip intl
 
 RUN docker-php-ext-install pdo_mysql gd zip intl
 
